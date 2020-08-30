@@ -10,4 +10,5 @@ urlpatterns = [
     path("post/<int:pk>/edit/", views.post_edit, name="post_edit"),
     path("delete/<int:pk>/", views.post_delete, name="delete"),
     path("logout/", auth_views.LogoutView.as_view(), name="logout"),
+    path("cv/", views.cv, name="cv"),
 ]

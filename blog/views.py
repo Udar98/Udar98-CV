@@ -60,3 +60,10 @@ def post_delete(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     return redirect("post_list")
+
+
+def cv(request):
+    return render(
+        request,
+        "blog/cv.html",
+    )
