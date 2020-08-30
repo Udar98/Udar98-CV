@@ -4,6 +4,7 @@ from django.utils import timezone
 from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
+from django.contrib.auth import logout
 
 
 def post_list(request):
@@ -48,3 +49,14 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
 
     return render(request, "blog/post_edit.html", {"form": form})
+
+
+def logout_user(request):
+    logout(request)
+    return render(request, "blog/post_detail.html", {"post": post})
+
+
+def post_delete(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.delete()
+    return redirect("post_list")
