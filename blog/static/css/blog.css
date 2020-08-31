@@ -6,6 +6,8 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     background-color: teal;
+    font-family: "Times New Roman", Times, serif;
+
 }   
 #red{
     color:red;
@@ -58,3 +60,6 @@ h1, h2, h3, h4 {
     border-radius: 15px 50px;
     background-color: rgb(237, 236, 180);
 } 
+.btn{
+    margin-bottom: 1rem;
+}
